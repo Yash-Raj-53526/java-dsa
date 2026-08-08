@@ -58,7 +58,41 @@ public class Strings {
 
         sc.close();
 
-        // reverse words in string
-
+        String s4 = "Hi my name is Yash";
+        System.out.println(RevWords(s4));
     }
+
+    public static String RevWords(String s) {
+        StringBuilder sb = new StringBuilder();
+        int i = s.length() - 1;
+        while (i >= 0) {
+            while (i >= 0 && s.charAt(i) == ' ') {
+                i--;
+            }
+            if (i < 0) {
+                break;
+            }
+            int j = i;
+
+            while (j >= 0 && s.charAt(j) != ' ') {// find the start index of word
+                j--;
+            }
+
+            // if space found - stop
+            // now appned in ans
+            sb.append(s.substring(j + 1, i + 1)).append(" ");
+
+            // remove extra space
+            while (j >= 0 && s.charAt(j) == ' ') {
+                j--;
+            }
+
+            if (j >= 0) {
+                sb.append(' ');
+            }
+            i = j; // place i at last index of remaining string
+        }
+        return sb.toString().trim();
+    }
+
 }
