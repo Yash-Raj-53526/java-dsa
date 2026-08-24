@@ -20,6 +20,7 @@ public class TwoSum {
         return new int[] { -1, -1 };
     }
 
+
     public static void main(String[] args) {
         int[] arr = { 2, 7, 11, 15, 2, 4, 3, 5, 8 };
         int target = 9;
