@@ -2,6 +2,7 @@ package JavaCollectionFramework;
 
 import java.net.SocketTimeoutException;
 import java.util.*;
+
 import javax.swing.AbstractAction;
 
 public class Main {
@@ -25,12 +26,11 @@ public class Main {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-
-        System.out.println("array list: " + list);
+        System.out.println("Array list: " + list);
         Collections.sort(list);
-        System.out.println("sorted list: " + list);
+        System.out.println("Sorted list: " + list);
         Collections.reverse(list);
-        System.out.println("reversed list: " + list);
+        System.out.println("Reversed list: " + list);
         // ArrayList<Integer> clonedList = (ArrayList<Integer>) list.clone();
         // System.out.println("cloned list: " + clonedList);
 
@@ -53,6 +53,7 @@ public class Main {
         while (it1.hasNext()) {
             System.out.println(it1.next());
         }
+
         System.out.println("--------------------------------");
 
         // vector -- dynamic array, similar to ArrayList but synchronized means
